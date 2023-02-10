@@ -1,6 +1,6 @@
 import { Display } from "../displays/DisplayApi";
 import courB12 from "bundle-text:../bdf/courB12.bdf";
-const BDFFont = require("bdf-canvas");
+import { BDFFont } from 'bdf-canvas';
 
 export type CIRC_OPT =
     "U8G2_DRAW_UPPER_RIGHT" |
@@ -628,13 +628,13 @@ export class U8G2 {
         const bdfFont = this.bdfFonts[fontName] && this.bdfFonts[fontName].bdfFont;
 
         if (bdfFont) {
-            return bdfFont;
+            return bdfFont as BDFFont;
         } else {
             const fetchFont = (fName: string) => {
                 fetch("./bdf/" + fName + ".bdf")
                     .then(resp => resp.text())
                     .then(text => {
-                        this.bdfFonts[fName] = { bdfFont: new BDFFont.BDFFont(text) };
+                        this.bdfFonts[fName] = { bdfFont: new BDFFont(text) };
                         console.log("got font" + fName, this.bdfFonts[fName]);
                     })
                     .catch(e => console.log(e));
@@ -644,7 +644,7 @@ export class U8G2 {
             fetchFont(fontName);
 
             // return dummy until loaded
-            return new BDFFont.BDFFont(courB12);
+            return new BDFFont(courB12);
         }
     }
 
