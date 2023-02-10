@@ -1,10 +1,10 @@
 
 declare module "*.bdf" {
-    const content: any;
+    const content: string;
     export default content;
 }
 
 declare module "*.raw.cpp" {
-    const content: any;
+    const content: string;
     export default content;
 }

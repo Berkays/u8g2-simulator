@@ -1,12 +1,12 @@
-import battery_signal from "./battery_signal.raw.cpp";
-import ugly_bird from "./ugly_bird.raw.cpp";
-import intro from "./intro.raw.cpp";
-import weather_clock from "./weather_clock.raw.cpp";
-import config_screen from "./config_screen.raw.cpp";
-import ui_elements from "./ui_elements.raw.cpp";
-import server_monitor from "./server_monitor.raw.cpp";
-import drawGlyph from "./drawGlyph.raw.cpp";
-import clock from "./clock.raw.cpp";
+import battery_signal from "bundle-text:./battery_signal.raw.cpp";
+import ugly_bird from "bundle-text:./ugly_bird.raw.cpp";
+import intro from "bundle-text:./intro.raw.cpp";
+import weather_clock from "bundle-text:./weather_clock.raw.cpp";
+import config_screen from "bundle-text:./config_screen.raw.cpp";
+import ui_elements from "bundle-text:./ui_elements.raw.cpp";
+import server_monitor from "bundle-text:./server_monitor.raw.cpp";
+import drawGlyph from "bundle-text:./drawGlyph.raw.cpp";
+import clock from "bundle-text:./clock.raw.cpp";
 
 export interface CodeExample {
     name: string;

@@ -1,5 +1,5 @@
 import { Display } from "../displays/DisplayApi";
-import courB12 from "../bdf/courB12.bdf";
+import courB12 from "bundle-text:../bdf/courB12.bdf";
 const BDFFont = require("bdf-canvas");
 
 export type CIRC_OPT =
